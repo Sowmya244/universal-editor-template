@@ -1,24 +1,42 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
-import { moveInstrumentation } from '../../scripts/scripts.js';
+// cards.js
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".cards > ul > li");
 
-export default function decorate(block) {
-  /* change to ul, li */
-  const ul = document.createElement('ul');
-  [...block.children].forEach((row) => {
-    const li = document.createElement('li');
-    moveInstrumentation(row, li);
-    while (row.firstElementChild) li.append(row.firstElementChild);
-    [...li.children].forEach((div) => {
-      if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
-      else div.className = 'cards-card-body';
+  // Floating animation with random phase for each card
+  cards.forEach((card, index) => {
+    const floatOffset = Math.random() * 10; // random offset
+    const floatDuration = 5 + Math.random() * 3; // 5-8s duration
+
+    card.style.animation = `${card.classList.contains('dream-card') ? 'floatDream' : 'floatTech'} ${floatDuration}s ease-in-out ${floatOffset}s infinite`;
+  });
+
+  // Hover tilt effect
+  cards.forEach((card) => {
+    card.addEventListener("mousemove", (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left; // mouse X inside card
+      const y = e.clientY - rect.top;  // mouse Y inside card
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * 5; // max 5deg
+      const rotateY = ((x - centerX) / centerX) * 5;
+
+      card.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg) translateZ(0)`;
     });
-    ul.append(li);
+
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "rotateX(0deg) rotateY(0deg) translateZ(0)";
+    });
   });
-  ul.querySelectorAll('picture > img').forEach((img) => {
-    const optimizedPic = createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]);
-    moveInstrumentation(img, optimizedPic.querySelector('img'));
-    img.closest('picture').replaceWith(optimizedPic);
-  });
-  block.textContent = '';
-  block.append(ul);
-}
+
+  // Optional: Scroll reveal effect
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  cards.forEach(card => observer.observe(card));
+});
