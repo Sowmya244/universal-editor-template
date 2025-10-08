@@ -1,0 +1,4 @@
+label: Stats
+icon: chart-bar
+description: Show site key metrics
+authorable: true
