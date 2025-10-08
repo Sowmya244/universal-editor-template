@@ -1,0 +1,35 @@
+.block.stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.block.stats .stat-item {
+  text-align: center;
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 12px;
+  min-width: 150px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.block.stats .stat-item:hover {
+  background: #e8f5e9;
+  transform: translateY(-5px);
+}
+
+.block.stats .stat-item h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: #2e7d32;
+}
+
+.block.stats .stat-item p {
+  margin: 5px 0 0;
+  font-size: 1rem;
+  color: #555;
+}
