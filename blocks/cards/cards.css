@@ -14,7 +14,7 @@
   border-radius: 16px;
   overflow: hidden;
   background-color: var(--background-color);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
   transform-style: preserve-3d;
   position: relative;
@@ -32,7 +32,7 @@
 /* Hover effect */
 .cards > ul > li:hover {
   transform: translateY(-10px) rotateX(2deg) rotateY(2deg);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  box-shadow: 0 20px 40px rgb(0 0 0 / 20%);
 }
 
 /* Image */
@@ -82,32 +82,22 @@
 .cards .cards-card-body .card-btn.dream-btn {
   background: linear-gradient(135deg, #ff9ff3, #feca57);
   color: #fff;
-  box-shadow: 0 4px 15px rgba(255,159,243,0.4);
+  box-shadow: 0 4px 15px rgb(255 159 243 / 40%);
 }
 
 .cards .cards-card-body .card-btn.dream-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(255,159,243,0.6);
+  box-shadow: 0 8px 25px rgb(255 159 243 / 60%);
 }
 
 .cards .cards-card-body .card-btn.tech-btn {
   background: linear-gradient(135deg, #00d2ff, #3a7bd5);
   color: #fff;
-  box-shadow: 0 4px 15px rgba(0,210,255,0.4);
+  box-shadow: 0 4px 15px rgb(0 210 255 / 40%);
 }
 
 .cards .cards-card-body .card-btn.tech-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(0,210,255,0.6);
+  box-shadow: 0 8px 25px rgb(0 210 255 / 60%);
 }
 
-/* Floating animations */
-@keyframes floatDream {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px) rotateZ(1deg); }
-}
-
-@keyframes floatTech {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px) rotateZ(-1deg); }
-}
