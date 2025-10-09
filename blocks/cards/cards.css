@@ -6,6 +6,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
   gap: 24px;
+  row-gap: 40px; 
   perspective: 1000px; /* for 3D hover effect */
 }
 
@@ -49,7 +50,7 @@
 /* ======= Card Body ======= */
 .cards .cards-card-body {
   margin: 16px;
-  color: #e0e0ff;
+  color: #070707;
   transition-property: color;
   transition-duration: 0.3s;
   transition-timing-function: ease;
@@ -138,7 +139,6 @@
     opacity: 0;
   }
 }
-
 
 /* ======= Fade-in Scroll Animation ======= */
 .cards.fade-in {
