@@ -1,6 +1,6 @@
 /* ======= Footer Container ======= */
 footer {
-  background-color: #ffffff; /* changed to white */
+  background-color: #fff; /* changed to white */
   font-size: var(--body-font-size-xs);
 }
 
@@ -17,11 +17,11 @@ footer .footer h3 {
 }
 
 footer .footer h4 {
-  color: #333333; /* fallback text color */
+  color: #333; /* fallback text color */
   margin-bottom: 12px;
   font-weight: 600;
   background: linear-gradient(90deg, #6a11cb, #2575fc); /* gradient for text */
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -35,7 +35,7 @@ footer .footer h4:hover {
 
 /* Subheading / small headings */
 footer .footer h6 {
-  color: #555555; /* darker shade for visibility */
+  color: #555; /* darker shade for visibility */
   margin-bottom: 12px;
 }
 
@@ -43,7 +43,7 @@ footer .footer h6 {
 footer .footer p {
   margin: 0;
   font-size: 0.95rem;
-  color: #333333; /* readable on white */
+  color: #333; /* readable on white */
   letter-spacing: 0.5px;
   transition: all 0.4s ease;
   position: relative;
@@ -52,11 +52,11 @@ footer .footer p {
 
 /* Hover effect — glowing gradient text */
 footer .footer p:hover {
-  color: #ffffff;
+  color: #fff;
   background: linear-gradient(90deg, #ff8c00, #ff2d55, #00c6ff);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
+  text-shadow: 0 0 20px rgb(255 140 0 / 50%);
   transform: translateY(-2px);
   cursor: default;
 }
