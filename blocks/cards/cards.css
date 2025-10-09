@@ -1,42 +1,124 @@
+/* ======= Cards Container ======= */
 .cards > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 cards per row on desktop */
-  grid-gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+  gap: 24px;
+  perspective: 1000px; /* for 3D hover effect */
 }
 
+/* ======= Individual Card ======= */
 .cards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
-  display: flex;
-  flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  cursor: pointer;
+  animation: floatCard 6s ease-in-out infinite alternate;
+  position: relative;
 }
 
-.cards .cards-card-body {
-  margin: 16px;
-}
-
-.cards .cards-card-image {
-  line-height: 0;
+/* ======= Hover Effects ======= */
+.cards > ul > li:hover {
+  transform: translateY(-10px) rotateY(2deg) rotateX(1deg) scale(1.03);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.35), 0 0 20px rgba(224, 224, 255, 0.5);
+  background: rgba(255,255,255,0.08);
 }
 
 .cards > ul > li img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4/3;
   object-fit: cover;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  filter: brightness(0.9);
 }
 
-/* Responsive adjustments */
-@media (width <= 1024px) {
-  .cards > ul {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
-  }
+.cards > ul > li:hover img {
+  transform: scale(1.07) rotate(0.5deg);
+  filter: brightness(1.1) saturate(1.2);
 }
 
-@media (width <= 600px) {
-  .cards > ul {
-    grid-template-columns: 1fr; /* 1 card per row on mobile */
-  }
+/* ======= Card Body ======= */
+.cards .cards-card-body {
+  margin: 16px;
+  color: #e0e0ff;
+  transition: color 0.3s ease;
+}
+
+.cards .cards-card-body h3 {
+  margin: 0 0 8px;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+/* ======= Floating Animation ======= */
+@keyframes floatCard {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ======= Glowing / Neon Effect ======= */
+.cards > ul > li::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle, rgba(224,224,255,0.25) 0%, transparent 70%);
+  opacity: 0.4;
+  filter: blur(30px);
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cards > ul > li:hover::before {
+  opacity: 0.7;
+  transform: scale(1.05);
+}
+
+/* ======= Reflection Overlay ======= */
+.cards > ul > li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to top, rgba(255,255,255,0.15), transparent);
+  pointer-events: none;
+}
+
+/* ======= Optional Particle Effect ======= */
+.cards > ul > li .particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cards > ul > li .particles span {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(224,224,255,0.6);
+  border-radius: 50%;
+  animation: particleMove 6s linear infinite;
+}
+
+@keyframes particleMove {
+  0% { transform: translateY(100%) translateX(0) scale(0.5); opacity: 0.3; }
+  50% { transform: translateY(50%) translateX(20px) scale(1); opacity: 0.7; }
+  100% { transform: translateY(0) translateX(0) scale(0.5); opacity: 0; }
 }
