@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const particlesContainer = document.createElement('div');
     particlesContainer.classList.add('particles');
 
-    for (let i = 0; i < count; i++) {
+    for (let i = 0; i < count; i += 1) {
       const particle = document.createElement('span');
       const x = Math.random() * 100;
       const y = Math.random() * 100;
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   cards.forEach((card) => {
     // Random float duration and offset
     const floatDuration = 5 + Math.random() * 3; // 5-8s
-    const floatOffset = Math.random() * 5;       // 0-5s
+    const floatOffset = Math.random() * 5; // 0-5s
     card.style.animation = `floatCard ${floatDuration}s ease-in-out ${floatOffset}s infinite alternate`;
 
     // Add tilt on hover
