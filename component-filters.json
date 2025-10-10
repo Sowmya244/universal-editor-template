@@ -63,5 +63,12 @@
     "components": [
       "accordion-item"
     ]
+  },
+  {
+    "id": "accordion-item",
+    "components": [
+      "title",
+      "richtext"
+    ]
   }
 ]
