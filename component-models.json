@@ -96,15 +96,31 @@
     ]
   },
   {
-  "id": "video",
-  "fields": [
-    { "component": "text", "name": "link", "label": "Video URL", "required": true },
-    { "component": "checkbox", "name": "autoplay", "label": "Autoplay", "value": false },
-    { "component": "checkbox", "name": "muted", "label": "Muted", "value": false },
-    { "component": "reference", "name": "placeholderImage", "label": "Placeholder Image", "multi": false }
-  ]
-},
-
+    "id": "video",
+    "fields": [
+      { "component": "text", "name": "link", "label": "Video URL", "required": true },
+      { "component": "checkbox", "name": "autoplay", "label": "Autoplay", "value": false },
+      { "component": "checkbox", "name": "muted", "label": "Muted", "value": false },
+      { "component": "reference", "name": "placeholderImage", "label": "Placeholder Image", "multi": false }
+    ]
+  },
+  {
+    "id": "accordion",
+    "fields": [
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Accordion Heading",
+        "value": ""
+      },
+      {
+        "component": "checkbox",
+        "name": "singleExpand",
+        "label": "Allow only one item open at a time",
+        "value": false
+      }
+    ]
+  },
   {
     "id": "accordion-item",
     "fields": [
