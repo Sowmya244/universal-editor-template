@@ -17,7 +17,8 @@
       "columns",
       "fragment",
       "stats",
-      "video"
+      "video",
+      "accordion"
     ]
   },
   {
@@ -56,5 +57,15 @@
     "component": "video",
     "icon": "🎬",
     "category": "Media"
+  },
+  {
+    "id": "accordion",
+    "components": [],
+    "title": "Accordion",
+    "tags": ["content", "accordion"],
+    "description": "Collapsible content block with multiple items",
+    "component": "accordion",
+    "icon": "📂",
+    "category": "Content"
   }
 ]

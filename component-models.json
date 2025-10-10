@@ -103,6 +103,30 @@
     { "component": "checkbox", "name": "muted", "label": "Muted", "value": false },
     { "component": "reference", "name": "placeholderImage", "label": "Placeholder Image", "multi": false }
   ]
+},
+{
+  "id": "accordion",
+  "fields": [
+    {
+      "component": "text",
+      "name": "title",
+      "label": "Accordion Title",
+      "value": ""
+    },
+    {
+      "component": "richtext",
+      "name": "content",
+      "label": "Accordion Content",
+      "value": ""
+    },
+    {
+      "component": "checkbox",
+      "name": "expanded",
+      "label": "Expanded by default",
+      "value": false
+    }
+  ]
 }
+
 
 ]
