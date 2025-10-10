@@ -93,6 +93,35 @@
     ]
   },
   {
+    "id": "video",
+    "fields": [
+      {
+        "component": "text",
+        "name": "url",
+        "label": "Video URL",
+        "description": "URL to the video (YouTube, Vimeo, or MP4)"
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title",
+        "description": "Video title for accessibility"
+      },
+      {
+        "component": "checkbox",
+        "name": "autoplay",
+        "label": "Autoplay",
+        "description": "Start playing automatically when page loads"
+      },
+      {
+        "component": "checkbox",
+        "name": "muted",
+        "label": "Muted",
+        "description": "Start video muted"
+      }
+    ]
+  },
+  {
     "id": "section",
     "fields": [
       {
