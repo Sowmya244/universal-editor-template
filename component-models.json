@@ -213,5 +213,36 @@
         "multi": false
       }
     ]
+  },
+  {
+    "id": "video",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Video Title",
+        "value": "🌊 Dive into the Ocean World"
+      },
+    
+      {
+        "component": "reference",
+        "name": "video",
+        "label": "Video File",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "name": "poster",
+        "label": "Poster Image",
+        "multi": false
+      },
+     
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Learn More Link"
+      }
+     
+    ]
   }
 ]

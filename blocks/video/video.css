@@ -1,0 +1,124 @@
+/* Container */
+.videoblock-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #e0f7fa, #f1f8ff);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 10%);
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Header */
+.videoblock-header {
+  margin-bottom: 1.5rem;
+}
+
+.videoblock-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #004d73;
+  margin: 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.videoblock-title:hover {
+  color: #0077a3;
+}
+
+.videoblock-subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0.3rem;
+}
+
+/* Video Wrapper */
+.videoblock-video-wrapper {
+  position: relative;
+  max-width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 25%);
+}
+
+.videoblock-video-wrapper video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Play Button (overlay) */
+.videoblock-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(0 0 0 / 60%);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.videoblock-play-btn:hover {
+  background: rgb(0 0 0 / 80%);
+}
+
+.videoblock-video-wrapper:hover .videoblock-play-btn {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+
+
+/* Footer */
+.videoblock-footer {
+  margin-top: 1rem;
+}
+
+.videoblock-description {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.videoblock-link {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #07c;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.videoblock-link:hover {
+  color: #005fa3;
+  border-color: #005fa3;
+}
+
+/* Responsive */
+@media (width <= 600px) {
+  .videoblock-title {
+    font-size: 1.5rem;
+  }
+
+  .videoblock-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .videoblock-play-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+}
