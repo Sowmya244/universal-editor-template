@@ -1,33 +1,23 @@
+/*
+ * Accordion Block
+ * Recreate an accordion
+ * https://www.hlx.live/developer/block-collection/accordion
+ */
+
 export default function decorate(block) {
-  const items = block.querySelectorAll('.accordion-item');
-  const singleExpand = block.dataset.singleExpand === 'true';
-
-  items.forEach((item) => {
-    const header = item.querySelector('.accordion-title');
-    const content = item.querySelector('.accordion-content');
-    const expanded = item.dataset.expanded === 'true';
-
-    if (expanded) {
-      item.classList.add('expanded');
-      content.style.maxHeight = `${content.scrollHeight}px`;
-    }
-
-    header.addEventListener('click', () => {
-      const isOpen = item.classList.contains('expanded');
-
-      if (isOpen) {
-        item.classList.remove('expanded');
-        content.style.maxHeight = null;
-      } else {
-        if (singleExpand) {
-          items.forEach((i) => {
-            i.classList.remove('expanded');
-            i.querySelector('.accordion-content').style.maxHeight = null;
-          });
-        }
-        item.classList.add('expanded');
-        content.style.maxHeight = `${content.scrollHeight}px`;
-      }
-    });
+  [...block.children].forEach((row) => {
+    // decorate accordion item label
+    const label = row.children[0];
+    const summary = document.createElement('summary');
+    summary.className = 'accordion-item-label';
+    summary.append(...label.childNodes);
+    // decorate accordion item body
+    const body = row.children[1];
+    body.className = 'accordion-item-body';
+    // decorate accordion item
+    const details = document.createElement('details');
+    details.className = 'accordion-item';
+    details.append(summary, body);
+    row.replaceWith(details);
   });
 }
