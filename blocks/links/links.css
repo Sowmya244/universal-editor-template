@@ -1,0 +1,14 @@
+.img-link-block a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.img-link-block a picture {
+  display: block;
+  margin: 0 auto;
+}
+
+.img-link-block a:hover {
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}
