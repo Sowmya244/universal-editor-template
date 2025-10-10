@@ -214,15 +214,30 @@
       }
     ]
   },
-{
-  "video": {
-    "title": "Video",
-    "tags": ["media", "video"],
-    "description": "Embed YouTube, Vimeo, or MP4 videos with placeholder and autoplay support",
-    "component": "video",
-    "icon": "🎬",
-    "category": "Media"
+  {
+    "id": "video",
+    "fields": [
+      {
+        "component": "text",
+        "name": "link",
+        "label": "Video URL",
+        "description": "Enter the URL of the video (YouTube, Vimeo, or MP4)",
+        "required": true
+      },
+      {
+        "component": "checkbox",
+        "name": "autoplay",
+        "label": "Autoplay",
+        "description": "Automatically play the video when it enters the viewport",
+        "value": false
+      },
+      {
+        "component": "reference",
+        "name": "placeholderImage",
+        "label": "Placeholder Image",
+        "description": "Optional image shown before video plays",
+        "multi": false
+      }
+    ]
   }
-}
-
 ]

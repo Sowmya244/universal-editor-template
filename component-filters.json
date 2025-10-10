@@ -46,5 +46,15 @@
     "components": [
       "stat-item"
     ]
+  },
+  {
+  "video": {
+    "title": "Video",
+    "tags": ["media", "video"],
+    "description": "Embed YouTube, Vimeo, or MP4 videos with placeholder and autoplay support",
+    "component": "video",
+    "icon": "🎬",
+    "category": "Media"
   }
+}
 ]
