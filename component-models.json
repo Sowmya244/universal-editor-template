@@ -2,51 +2,22 @@
   {
     "id": "page-metadata",
     "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "jcr:title",
-        "label": "Title"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "jcr:description",
-        "label": "Description"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "keywords",
-        "multi": true,
-        "label": "Keywords"
-      }
+      { "component": "text", "valueType": "string", "name": "jcr:title", "label": "Title" },
+      { "component": "text", "valueType": "string", "name": "jcr:description", "label": "Description" },
+      { "component": "text", "valueType": "string", "name": "keywords", "multi": true, "label": "Keywords" }
     ]
   },
   {
     "id": "image",
     "fields": [
-      {
-        "component": "reference",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "name": "imageAlt",
-        "label": "Alt Text"
-      }
+      { "component": "reference", "name": "image", "label": "Image", "multi": false },
+      { "component": "text", "name": "imageAlt", "label": "Alt Text" }
     ]
   },
   {
     "id": "title",
     "fields": [
-      {
-        "component": "text",
-        "name": "title",
-        "label": "Title"
-      },
+      { "component": "text", "name": "title", "label": "Title" },
       {
         "component": "select",
         "name": "titleType",
@@ -65,21 +36,9 @@
   {
     "id": "button",
     "fields": [
-      {
-        "component": "aem-content",
-        "name": "link",
-        "label": "Link"
-      },
-      {
-        "component": "text",
-        "name": "linkText",
-        "label": "Text"
-      },
-      {
-        "component": "text",
-        "name": "linkTitle",
-        "label": "Title"
-      },
+      { "component": "aem-content", "name": "link", "label": "Link" },
+      { "component": "text", "name": "linkText", "label": "Text" },
+      { "component": "text", "name": "linkTitle", "label": "Title" },
       {
         "component": "select",
         "name": "linkType",
@@ -93,180 +52,56 @@
     ]
   },
   {
-    "id": "video",
-    "fields": [
-      {
-        "component": "text",
-        "name": "url",
-        "label": "Video URL",
-        "description": "URL to the video (YouTube, Vimeo, or MP4)"
-      },
-      {
-        "component": "text",
-        "name": "title",
-        "label": "Title",
-        "description": "Video title for accessibility"
-      },
-      {
-        "component": "checkbox",
-        "name": "autoplay",
-        "label": "Autoplay",
-        "description": "Start playing automatically when page loads"
-      },
-      {
-        "component": "checkbox",
-        "name": "muted",
-        "label": "Muted",
-        "description": "Start video muted"
-      }
-    ]
-  },
-  {
     "id": "section",
     "fields": [
-      {
-        "component": "text",
-        "name": "name",
-        "label": "Section Name",
-        "description": "The label shown for this section in the Content Tree"
-      },
-      {
-        "component": "multiselect",
-        "name": "style",
-        "label": "Style",
-        "options": [
-          { "name": "Highlight", "value": "highlight" }
-        ]
-      }
+      { "component": "text", "name": "name", "label": "Section Name", "description": "The label shown for this section in the Content Tree" },
+      { "component": "multiselect", "name": "style", "label": "Style", "options": [{ "name": "Highlight", "value": "highlight" }] }
     ]
   },
   {
     "id": "card",
     "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
+      { "component": "reference", "valueType": "string", "name": "image", "label": "Image", "multi": false },
+      { "component": "richtext", "name": "text", "value": "", "label": "Text", "valueType": "string" }
     ]
   },
   {
     "id": "columns",
     "fields": [
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "columns",
-        "value": "",
-        "label": "Columns"
-      },
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "rows",
-        "value": "",
-        "label": "Rows"
-      }
+      { "component": "text", "valueType": "number", "name": "columns", "value": "", "label": "Columns" },
+      { "component": "text", "valueType": "number", "name": "rows", "value": "", "label": "Rows" }
     ]
   },
   {
     "id": "fragment",
     "fields": [
-      {
-        "component": "aem-content",
-        "name": "reference",
-        "label": "Reference"
-      }
+      { "component": "aem-content", "name": "reference", "label": "Reference" }
     ]
   },
   {
     "id": "hero",
     "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
+      { "component": "reference", "valueType": "string", "name": "image", "label": "Image", "multi": false },
+      { "component": "text", "valueType": "string", "name": "imageAlt", "label": "Alt", "value": "" },
+      { "component": "richtext", "name": "text", "value": "", "label": "Text", "valueType": "string" }
     ]
   },
   {
     "id": "stats",
     "fields": [
-      {
-        "component": "text",
-        "name": "number",
-        "label": "Number",
-        "value": "0"
-      },
-      {
-        "component": "text",
-        "name": "title",
-        "label": "Title",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "name": "description",
-        "label": "Description",
-        "value": ""
-      },
-      {
-        "component": "reference",
-        "name": "icon",
-        "label": "Icon",
-        "multi": false
-      }
+      { "component": "text", "name": "number", "label": "Number", "value": "0" },
+      { "component": "text", "name": "title", "label": "Title", "value": "" },
+      { "component": "text", "name": "description", "label": "Description", "value": "" },
+      { "component": "reference", "name": "icon", "label": "Icon", "multi": false }
     ]
   },
   {
     "id": "video",
     "fields": [
-      {
-        "component": "text",
-        "name": "link",
-        "label": "Video URL",
-        "description": "Enter the URL of the video (YouTube, Vimeo, or MP4)",
-        "required": true
-      },
-      {
-        "component": "checkbox",
-        "name": "autoplay",
-        "label": "Autoplay",
-        "description": "Automatically play the video when it enters the viewport",
-        "value": false
-      },
-      {
-        "component": "reference",
-        "name": "placeholderImage",
-        "label": "Placeholder Image",
-        "description": "Optional image shown before video plays",
-        "multi": false
-      }
+      { "component": "text", "name": "link", "label": "Video URL", "description": "Enter the URL of the video (YouTube, Vimeo, or MP4)", "required": true },
+      { "component": "checkbox", "name": "autoplay", "label": "Autoplay", "description": "Automatically play the video when it enters the viewport", "value": false },
+      { "component": "checkbox", "name": "muted", "label": "Muted", "description": "Start video muted", "value": false },
+      { "component": "reference", "name": "placeholderImage", "label": "Placeholder Image", "description": "Optional image shown before video plays", "multi": false }
     ]
   }
 ]
