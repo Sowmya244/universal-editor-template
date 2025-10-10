@@ -1,53 +1,16 @@
 [
-  {
-    "id": "main",
-    "components": [
-      "section"
-    ]
-  },
+  { "id": "main", "components": ["section"] },
   {
     "id": "section",
     "components": [
-      "text",
-      "image",
-      "button",
-      "title",
-      "hero",
-      "cards",
-      "columns",
-      "fragment",
-      "stats",
-      "video",
-      "accordion"
+      "text", "image", "button", "title", "hero",
+      "cards", "columns", "fragment", "stats", "video", "accordion"
     ]
   },
-  {
-    "id": "cards",
-    "components": [
-      "card"
-    ]
-  },
-  {
-    "id": "columns",
-    "components": [
-      "column"
-    ]
-  },
-  {
-    "id": "column",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title"
-    ]
-  },
-  {
-    "id": "stats",
-    "components": [
-      "stat-item"
-    ]
-  },
+  { "id": "cards", "components": ["card"] },
+  { "id": "columns", "components": ["column"] },
+  { "id": "column", "components": ["text", "image", "button", "title"] },
+  { "id": "stats", "components": ["stat-item"] },
   {
     "id": "video",
     "components": [],
@@ -58,8 +21,5 @@
     "icon": "🎬",
     "category": "Media"
   },
-  {
-    "id": "accordion",
-    "components": ["accordion-item"]
-  }
+  { "id": "accordion", "components": ["accordion-item"] }
 ]
