@@ -104,6 +104,7 @@
     { "component": "reference", "name": "placeholderImage", "label": "Placeholder Image", "multi": false }
   ]
 },
+
   {
     "id": "accordion-item",
     "fields": [
