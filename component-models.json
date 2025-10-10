@@ -96,12 +96,13 @@
     ]
   },
   {
-    "id": "video",
-    "fields": [
-      { "component": "text", "name": "link", "label": "Video URL", "description": "Enter the URL of the video (YouTube, Vimeo, or MP4)", "required": true },
-      { "component": "checkbox", "name": "autoplay", "label": "Autoplay", "description": "Automatically play the video when it enters the viewport", "value": false },
-      { "component": "checkbox", "name": "muted", "label": "Muted", "description": "Start video muted", "value": false },
-      { "component": "reference", "name": "placeholderImage", "label": "Placeholder Image", "description": "Optional image shown before video plays", "multi": false }
-    ]
-  }
+  "id": "video",
+  "fields": [
+    { "component": "text", "name": "link", "label": "Video URL", "required": true },
+    { "component": "checkbox", "name": "autoplay", "label": "Autoplay", "value": false },
+    { "component": "checkbox", "name": "muted", "label": "Muted", "value": false },
+    { "component": "reference", "name": "placeholderImage", "label": "Placeholder Image", "multi": false }
+  ]
+}
+
 ]
