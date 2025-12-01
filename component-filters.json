@@ -48,7 +48,7 @@
     "components": []
   },
   {
-    "id": "download",
-    "components": []
-  }
+  "id": "download",
+  "components": ["download-item"]
+}
 ]
