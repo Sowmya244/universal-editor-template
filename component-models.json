@@ -136,5 +136,45 @@
       { "component": "reference", "name": "image", "label": "Image", "multi": false },
       { "component": "aem-content", "name": "link", "label": "Link" }
     ]
-  }
+  },
+  {
+  "id": "download",
+  "fields": [
+    {
+      "component": "object",
+      "name": "items",
+      "label": "Download Items",
+      "multi": true,
+      "fields": [
+        {
+          "component": "text",
+          "name": "title",
+          "label": "Download Title"
+        },
+        {
+          "component": "richtext",
+          "name": "description",
+          "label": "Description"
+        },
+        {
+          "component": "text",
+          "name": "fileUrl",
+          "label": "File URL",
+          "required": true
+        },
+        {
+          "component": "select",
+          "name": "fileType",
+          "label": "File Type",
+          "options": [
+            { "name": "PDF", "value": "pdf" },
+            { "name": "ZIP", "value": "zip" },
+            { "name": "DOCX", "value": "docx" },
+            { "name": "PPTX", "value": "pptx" }
+          ]
+        }
+      ]
+    }
+  ]
+}
 ]

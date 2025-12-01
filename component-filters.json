@@ -1,16 +1,35 @@
 [
   { "id": "main", "components": ["section"] },
+
   {
     "id": "section",
     "components": [
-      "text", "image", "button", "title", "hero",
-      "cards", "columns", "fragment", "stats", "video", "accordion"
+      "text",
+      "image",
+      "button",
+      "title",
+      "hero",
+      "cards",
+      "columns",
+      "fragment",
+      "stats",
+      "video",
+      "accordion",
+      "download"
     ]
   },
+
   { "id": "cards", "components": ["card"] },
+
   { "id": "columns", "components": ["column"] },
-  { "id": "column", "components": ["text", "image", "button", "title"] },
+
+  {
+    "id": "column",
+    "components": ["text", "image", "button", "title"]
+  },
+
   { "id": "stats", "components": ["stat-item"] },
+
   {
     "id": "video",
     "components": [],
@@ -21,10 +40,15 @@
     "icon": "🎬",
     "category": "Media"
   },
-  { "id": "accordion", "components": ["accordion-item"] },
-  {
-  "id": "img-link-block",
-  "components": []
-}
 
+  { "id": "accordion", "components": ["accordion-item"] },
+
+  {
+    "id": "img-link-block",
+    "components": []
+  },
+  {
+    "id": "download",
+    "components": []
+  }
 ]
