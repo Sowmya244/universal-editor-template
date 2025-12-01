@@ -47,8 +47,12 @@
     "id": "img-link-block",
     "components": []
   },
-  {
+ {
   "id": "download",
   "components": ["download-item"]
+},
+{
+  "id": "download-item",
+  "components": []
 }
 ]
