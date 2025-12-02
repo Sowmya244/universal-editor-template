@@ -7,6 +7,7 @@
       { "component": "text", "valueType": "string", "name": "keywords", "multi": true, "label": "Keywords" }
     ]
   },
+
   {
     "id": "image",
     "fields": [
@@ -14,6 +15,7 @@
       { "component": "text", "name": "imageAlt", "label": "Alt Text" }
     ]
   },
+
   {
     "id": "title",
     "fields": [
@@ -33,6 +35,7 @@
       }
     ]
   },
+
   {
     "id": "button",
     "fields": [
@@ -51,6 +54,7 @@
       }
     ]
   },
+
   {
     "id": "section",
     "fields": [
@@ -58,6 +62,7 @@
       { "component": "multiselect", "name": "style", "label": "Style", "options": [{ "name": "Highlight", "value": "highlight" }] }
     ]
   },
+
   {
     "id": "card",
     "fields": [
@@ -65,13 +70,15 @@
       { "component": "richtext", "name": "text", "value": "", "label": "Text", "valueType": "string" }
     ]
   },
+
   {
     "id": "columns",
     "fields": [
-      { "component": "text", "valueType": "number", "name": "columns", "value": "", "label": "Columns" },
-      { "component": "text", "valueType": "number", "name": "rows", "value": "", "label": "Rows" }
+      { "component": "text", "valueType": "number", "name": "columns", "label": "Columns" },
+      { "component": "text", "valueType": "number", "name": "rows", "label": "Rows" }
     ]
   },
+
   {
     "id": "column",
     "fields": [
@@ -79,75 +86,42 @@
       { "component": "text", "name": "text", "label": "Text" }
     ]
   },
+
   {
     "id": "fragment",
     "fields": [
       { "component": "aem-content", "name": "reference", "label": "Reference" }
     ]
   },
+
   {
     "id": "hero",
     "fields": [
       { "component": "reference", "valueType": "string", "name": "image", "label": "Image", "multi": false },
-      { "component": "text", "valueType": "string", "name": "imageAlt", "label": "Alt", "value": "" },
-      { "component": "richtext", "name": "text", "value": "", "label": "Text", "valueType": "string" }
+      { "component": "text", "valueType": "string", "name": "imageAlt", "label": "Alt" },
+      { "component": "richtext", "name": "text", "label": "Text" }
     ]
   },
+
   {
     "id": "stats",
     "fields": [
       { "component": "text", "name": "number", "label": "Number", "value": "0" },
-      { "component": "text", "name": "title", "label": "Title", "value": "" },
-      { "component": "text", "name": "description", "label": "Description", "value": "" },
+      { "component": "text", "name": "title", "label": "Title" },
+      { "component": "text", "name": "description", "label": "Description" },
       { "component": "reference", "name": "icon", "label": "Icon", "multi": false }
     ]
   },
-  {
-  "id": "download",
-  "fields": [
-    {
-      "component": "text",
-      "name": "title",
-      "label": "Download Title"
-    },
-    {
-      "component": "text",
-      "name": "description",
-      "label": "Description"
-    },
-    {
-      "component": "text",
-      "name": "fileUrl",
-      "label": "File URL"
-    },
-    {
-      "component": "text",
-      "name": "fileMeta",
-      "label": "File Metadata",
-      "fields": [
-        {
-          "component": "select",
-          "name": "fileType",
-          "label": "File Type",
-          "options": [
-            { "name": "PDF", "value": "pdf" },
-            { "name": "ZIP", "value": "zip" },
-            { "name": "DOCX", "value": "docx" },
-            { "name": "PPTX", "value": "pptx" }
-          ]
-        }
-      ]
-    }
-  ]
-},
+
   {
     "id": "accordion-item",
     "fields": [
-      { "component": "text", "name": "title", "label": "Accordion Title", "value": "" },
-      { "component": "richtext", "name": "content", "label": "Accordion Content", "value": "" },
+      { "component": "text", "name": "title", "label": "Accordion Title" },
+      { "component": "richtext", "name": "content", "label": "Accordion Content" },
       { "component": "checkbox", "name": "expanded", "label": "Expanded by default", "value": false }
     ]
   },
+
   {
     "id": "accordion",
     "fields": [
@@ -156,6 +130,45 @@
         "name": "items",
         "label": "Accordion Items",
         "multi": true
+      }
+    ]
+  },
+
+  {
+    "id": "download",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Download Title"
+      },
+      {
+        "component": "text",
+        "name": "description",
+        "label": "Description"
+      },
+      {
+        "component": "text",
+        "name": "fileUrl",
+        "label": "File URL"
+      },
+      {
+        "component": "object",
+        "name": "fileMeta",
+        "label": "File Metadata",
+        "fields": [
+          {
+            "component": "select",
+            "name": "fileType",
+            "label": "File Type",
+            "options": [
+              { "name": "PDF", "value": "pdf" },
+              { "name": "ZIP", "value": "zip" },
+              { "name": "DOCX", "value": "docx" },
+              { "name": "PPTX", "value": "pptx" }
+            ]
+          }
+        ]
       }
     ]
   },
