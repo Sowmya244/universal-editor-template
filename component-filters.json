@@ -1,5 +1,8 @@
 [
-  { "id": "main", "components": ["section"] },
+  {
+    "id": "main",
+    "components": ["section"]
+  },
 
   {
     "id": "section",
@@ -15,44 +18,53 @@
       "stats",
       "video",
       "accordion",
-      "download"
+      "download",
+      "img-link-block"
     ]
   },
 
-  { "id": "cards", "components": ["card"] },
+  {
+    "id": "cards",
+    "components": ["card"]
+  },
 
-  { "id": "columns", "components": ["column"] },
+  {
+    "id": "columns",
+    "components": ["column"]
+  },
 
   {
     "id": "column",
     "components": ["text", "image", "button", "title"]
   },
 
-  { "id": "stats", "components": ["stat-item"] },
+  {
+    "id": "stats",
+    "components": ["stat-item"]
+  },
 
   {
     "id": "video",
-    "components": [],
-    "title": "Video",
-    "tags": ["media", "video"],
-    "description": "Embed YouTube, Vimeo, or MP4 videos with placeholder and autoplay support",
-    "component": "video",
-    "icon": "🎬",
-    "category": "Media"
+    "components": []
   },
 
-  { "id": "accordion", "components": ["accordion-item"] },
+  {
+    "id": "accordion",
+    "components": ["accordion-item"]  
+  },
+
+  {
+    "id": "accordion-item",
+    "components": [] 
+  },
+
+  {
+    "id": "download",
+    "components": []   
+  },
 
   {
     "id": "img-link-block",
     "components": []
-  },
- {
-  "id": "download",
-  "components": ["download-item"]
-},
-{
-  "id": "download-item",
-  "components": []
-}
+  }
 ]

@@ -121,7 +121,7 @@
       "label": "File URL"
     },
     {
-      "component": "object",
+      "component": "text",
       "name": "fileMeta",
       "label": "File Metadata",
       "fields": [
