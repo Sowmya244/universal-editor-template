@@ -1,8 +1,5 @@
 [
-  {
-    "id": "main",
-    "components": ["section"]
-  },
+  { "id": "main", "components": ["section"] },
 
   {
     "id": "section",
@@ -23,48 +20,17 @@
     ]
   },
 
-  {
-    "id": "cards",
-    "components": ["card"]
-  },
+  { "id": "cards", "components": ["card"] },
+  { "id": "columns", "components": ["column"] },
+  { "id": "column", "components": ["text", "image", "button", "title"] },
+  { "id": "stats", "components": ["stat-item"] },
 
-  {
-    "id": "columns",
-    "components": ["column"]
-  },
+  { "id": "video", "components": [] },
 
-  {
-    "id": "column",
-    "components": ["text", "image", "button", "title"]
-  },
+  { "id": "accordion", "components": ["accordion-item"] },
+  { "id": "accordion-item", "components": [] },
 
-  {
-    "id": "stats",
-    "components": ["stat-item"]
-  },
+  { "id": "download", "components": [] },
 
-  {
-    "id": "video",
-    "components": []
-  },
-
-  {
-    "id": "accordion",
-    "components": ["accordion-item"]  
-  },
-
-  {
-    "id": "accordion-item",
-    "components": [] 
-  },
-
-  {
-    "id": "download",
-    "components": []   
-  },
-
-  {
-    "id": "img-link-block",
-    "components": []
-  }
+  { "id": "img-link-block", "components": [] }
 ]
